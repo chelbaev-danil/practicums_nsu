@@ -19,9 +19,9 @@ def date_to_seconds(date_str: str) -> int:
             raise ValueError("Секунды должны быть от 0 до 59")
         
         days_in_month = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+        
         if (year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)):
             days_in_month[1] = 29  # февраль в високосном году
-        
         if not (1 <= day <= days_in_month[month - 1]):
             raise ValueError("Некорректная дата: неверное количество дней в месяце")
          
