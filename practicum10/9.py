@@ -1,4 +1,9 @@
 def date_to_seconds(date_str: str) -> int:
+    '''
+    Accepts a string in the format "MM/DD/YYYY HR:MIN:SEC"
+    and returns the number of seconds elapsed since 01/01/YYYY 00:00:00
+    Performs full validation of the input data. 
+    '''
     try:
         if ' ' not in date_str:
             raise ValueError("Неверный формат: отсутствует пробел между датой и временем")
